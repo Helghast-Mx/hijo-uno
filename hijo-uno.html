@@ -11,12 +11,17 @@
 
       button{
         color:white;
+        text-align: center;
+        position: static;
         border-radius: 5px;
         padding: 5px 10px 5px 10px;
         font-size: 13px;
         background: var(--ids-button-color, rgba(147, 235, 5, 0.609));
-        stroke:var(--ids-buton-add-color, currentcolor)
+        stroke:var(--ids-buton-add-color, currentcolor);
+        margin-top: 1em;
+        
       }
+
 
       :host([action="uno"]) button {
         background: var(--ids-button-add-color, rgba(5, 131, 235, 0.609))
@@ -27,9 +32,9 @@
       
     
     </style>
-    <h2>Hijo [[prop1]]!</h2>
 
-    <button><slot></slot></button>
+
+<button><slot></slot></button>
 
   </template>
 
