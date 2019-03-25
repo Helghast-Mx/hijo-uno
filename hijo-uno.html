@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="./demo/index.html">
+
+<dom-module id="hijo-uno">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+
+      button{
+        color:white;
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+        font-size: 13px;
+        background: var(--ids-button-color, rgba(147, 235, 5, 0.609));
+        stroke:var(--ids-buton-add-color, currentcolor)
+      }
+
+      :host([action="uno"]) button {
+        background: var(--ids-button-add-color, rgba(5, 131, 235, 0.609))
+      }
+      :host([action="dos"]) button {
+        background: var(--ids-button-add-color, rgba(147, 235, 5, 0.609))
+      }
+      
+    
+    </style>
+    <h2>Hijo [[prop1]]!</h2>
+
+    <button><slot></slot></button>
+
+  </template>
+
+  <script>
+   
+    
+
+
+    class HijoUno extends Polymer.Element {
+      static get is() { return 'hijo-uno'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'Uno'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(HijoUno.is, HijoUno);
+  </script>
+</dom-module>

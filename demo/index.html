@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>hijo-uno demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../hijo-uno.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+html{
+
+         /* --ids-button-add-color: #2196f3; */
+         padding: 5%;
+}
+
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic hijo-uno demo</h3>
+      <demo-snippet>
+        <template>
+          <body id="btn-action">
+            <div>
+              <hijo-uno action="uno" id="uno">UNO</hijo-uno>
+              <hr>
+              <hijo-uno action="dos" id="dos">DOS</hijo-uno>
+              <hr>
+           
+            </div>
+          </body>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
